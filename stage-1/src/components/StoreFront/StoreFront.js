@@ -14,13 +14,15 @@ class StoreFront extends Component {
     componentDidMount() {
         axios.get("https://practiceapi.devmountain.com/products/")
             .then((response) => {
+            
                 this.setState({
-                    products: response
+                    products: response.data
                 })
             })
     }
 
     render() {
+        // const{products} = this.state;
         let productDisplay = this.state.products.map((element, index) => {
             return (
                 <div className="product-container" key={index}>

@@ -4,9 +4,12 @@ import { connect } from 'react-redux';
 import { addToShoppingCart, getAllProducts } from '../../redux/reducer';
 
 class StoreFront extends Component {
+    constructor(){
+        super();
+    }
 
     componentDidMount() {
-        this.props.getAllProducts();
+       this.props.getAllProducts();
     }
 
     render() {
